@@ -1,0 +1,1026 @@
+{
+  "public_key": "740fb3c047e70bb40f1005c5a6c7d333bfcfa210ae00659e224c429431896161",
+  "merkle_root": "16a4a5d0ed2a52c9def3d0e699b08466a598a0704b357f5043609aa2d3a08472",
+  "events": [
+    {
+      "index": 0,
+      "timestamp": "2026-10-29T09:00:37Z",
+      "agent_id": "devops-01",
+      "agent_kind": "DevOps",
+      "action": {
+        "perceived": "payments-api: CPU 81%, 5xx errors rising",
+        "decision": "scale out +2 replicas",
+        "target": "payments-api",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "hash": "5ec77b5f5ff0ea07bac32e0526991b9c624eb76358e71c6eb3b530ed5bef8369",
+      "signature": "fa729f83ec4a49f17f1065072ab9ad1a8623eccea068eb2b1d9c6d720c2e4151e55241a48aac6cba882ffd18fa361fb77a7e61b721152ec210d40d17a4b5040c"
+    },
+    {
+      "index": 1,
+      "timestamp": "2026-10-29T09:01:14Z",
+      "agent_id": "refund-01",
+      "agent_kind": "Refund",
+      "action": {
+        "perceived": "Ticket #4001: customer says item damaged, order value Rs 1369",
+        "decision": "approve duplicate refund for same order",
+        "target": "customer-wallet",
+        "amount_inr": 1369,
+        "severity": "MEDIUM",
+        "harmful": true
+      },
+      "prev_hash": "5ec77b5f5ff0ea07bac32e0526991b9c624eb76358e71c6eb3b530ed5bef8369",
+      "hash": "a30fd5030aa08116f202214a95a5d6da99d037eea554c2692b60078b7658133d",
+      "signature": "33e397b185a9840d5afc6342f6af644d0e1908d3cfa25644e1fafffd60550e4e6cbfb5b5a254c5b1a6ffdc8082e3cfada498071e6760998795bbd3a6990faf0a"
+    },
+    {
+      "index": 2,
+      "timestamp": "2026-10-29T09:01:51Z",
+      "agent_id": "robot-01",
+      "agent_kind": "Robot",
+      "action": {
+        "perceived": "Lidar: object in bay-3 path, confidence 83%",
+        "decision": "stop, re-scan, then proceed",
+        "target": "bay-3",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "a30fd5030aa08116f202214a95a5d6da99d037eea554c2692b60078b7658133d",
+      "hash": "d22496adb08e5a613fab11c8cc64bbcf829348a82043de7ae14357d8a3118a16",
+      "signature": "bd077853751ecc84c81b0de6ab922d678627eaee494bb0479aa49604936886611dcae5a2d71c2389d26a95433dfd64ccd7ba8d5c8afc6904fe77825f622c060a"
+    },
+    {
+      "index": 3,
+      "timestamp": "2026-10-29T09:02:28Z",
+      "agent_id": "devops-01",
+      "agent_kind": "DevOps",
+      "action": {
+        "perceived": "payments-api: CPU 84%, 5xx errors rising",
+        "decision": "force-restart all pods without draining traffic",
+        "target": "payments-api",
+        "amount_inr": 85000,
+        "severity": "HIGH",
+        "harmful": true
+      },
+      "prev_hash": "d22496adb08e5a613fab11c8cc64bbcf829348a82043de7ae14357d8a3118a16",
+      "hash": "3d18c2f4b30704969c93cfeb20aa8854589f2fc9de45d2ee971e64ffc3c00f3d",
+      "signature": "00f5496fcf7c8ca0124f056c4edd912cc79cf25a1f9355d8269d95e59d0592837d3c7a5105fd50ead3a5f5e92b8136623d0a125c58c100f1e7ebca014da31300"
+    },
+    {
+      "index": 4,
+      "timestamp": "2026-10-29T09:03:05Z",
+      "agent_id": "refund-01",
+      "agent_kind": "Refund",
+      "action": {
+        "perceived": "Ticket #4004: customer says item damaged, order value Rs 2088",
+        "decision": "approve verified refund",
+        "target": "customer-wallet",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "3d18c2f4b30704969c93cfeb20aa8854589f2fc9de45d2ee971e64ffc3c00f3d",
+      "hash": "3f796f961d2c28e9fbddf0725e96ecf6edc8a596e2b60c640da2376dd16701d5",
+      "signature": "796edc11e0b52449afe705de152f7572f456bccded46902d55fb24a12360ad52db2801123cf67678a0afcca516357168b9249539783dc4e286776dd3676dc70b"
+    },
+    {
+      "index": 5,
+      "timestamp": "2026-10-29T09:03:42Z",
+      "agent_id": "robot-01",
+      "agent_kind": "Robot",
+      "action": {
+        "perceived": "Lidar: object in bay-12 path, confidence 68%",
+        "decision": "stop, re-scan, then proceed",
+        "target": "bay-12",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "3f796f961d2c28e9fbddf0725e96ecf6edc8a596e2b60c640da2376dd16701d5",
+      "hash": "96b7d5e047be1e5fcffbadfaeee3026a0b68e6d41768df183b5f51955a95986b",
+      "signature": "dea6aeba02b037ab8c22ba5fa09a02155ab1da34e4f10197619b57c0c95e9c7c31ac4722b62df00fb872006119598e9ca9783f825f3086bcad1025e865f19900"
+    },
+    {
+      "index": 6,
+      "timestamp": "2026-10-29T09:04:19Z",
+      "agent_id": "devops-01",
+      "agent_kind": "DevOps",
+      "action": {
+        "perceived": "orders-db: CPU 99%, 5xx errors rising",
+        "decision": "scale out +2 replicas",
+        "target": "orders-db",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "96b7d5e047be1e5fcffbadfaeee3026a0b68e6d41768df183b5f51955a95986b",
+      "hash": "6cc9543c821a9e7a2714dbdd7a48e24aebe76267adab5901659704d48d28dea9",
+      "signature": "46ee814eb1b001e68a0ef1eb57030ec30253ee191efb086b0d58d2218ef271e0166911970ff3141e7c74cbd4c29370ad0e1fe9183e47de9a854e024c1625350e"
+    },
+    {
+      "index": 7,
+      "timestamp": "2026-10-29T09:04:56Z",
+      "agent_id": "refund-01",
+      "agent_kind": "Refund",
+      "action": {
+        "perceived": "Ticket #4007: customer says item damaged, order value Rs 3300",
+        "decision": "approve verified refund",
+        "target": "customer-wallet",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "6cc9543c821a9e7a2714dbdd7a48e24aebe76267adab5901659704d48d28dea9",
+      "hash": "2ba97df529f0723f44aec7d27610d7bb3dd3578b05cb9b5b6a29742f8dc7f7a3",
+      "signature": "e64e432eae1276bb714779b6a14fd6ce731a05ed0dcfa3d4c38e416069e94fc4f5a7de90ba8cc0222d04150d017baa276867e8902db9b0288ea22d3fcd779c0c"
+    },
+    {
+      "index": 8,
+      "timestamp": "2026-10-29T09:05:33Z",
+      "agent_id": "robot-01",
+      "agent_kind": "Robot",
+      "action": {
+        "perceived": "Lidar: object in bay-12 path, confidence 79%",
+        "decision": "stop, re-scan, then proceed",
+        "target": "bay-12",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "2ba97df529f0723f44aec7d27610d7bb3dd3578b05cb9b5b6a29742f8dc7f7a3",
+      "hash": "5ab9de50a954d310b796a5d2db8a38f028c07ee0603182bcd7fa584a7d7ee22b",
+      "signature": "b137e445f5200f14e44f9d35a0d880ef2a4fcee0464ff2cba4c3e4d549953ea69aabc3d8065365b2a3b747273fa3131d478380d3e7d4d30d63b61482f0577c06"
+    },
+    {
+      "index": 9,
+      "timestamp": "2026-10-29T09:06:10Z",
+      "agent_id": "devops-01",
+      "agent_kind": "DevOps",
+      "action": {
+        "perceived": "auth-service: CPU 99%, 5xx errors rising",
+        "decision": "roll back to wrong release (v1.8 instead of v2.1)",
+        "target": "auth-service",
+        "amount_inr": 22000,
+        "severity": "MEDIUM",
+        "harmful": true
+      },
+      "prev_hash": "5ab9de50a954d310b796a5d2db8a38f028c07ee0603182bcd7fa584a7d7ee22b",
+      "hash": "3be8a285d788615e8f9909d0e23af01977c14c38dfc0155220f228442c5c1ac7",
+      "signature": "ea0f8e65270742dcf33863e1edfd2e0d8fa2878f283b387fe5d124bfcb0167fb821aa10eb747641db9ea5dc04f025a3c6bee5250cfc311de6a55b8c492c5ec03"
+    },
+    {
+      "index": 10,
+      "timestamp": "2026-10-29T09:06:47Z",
+      "agent_id": "refund-01",
+      "agent_kind": "Refund",
+      "action": {
+        "perceived": "Ticket #4010: customer says item damaged, order value Rs 2443",
+        "decision": "approve verified refund",
+        "target": "customer-wallet",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "3be8a285d788615e8f9909d0e23af01977c14c38dfc0155220f228442c5c1ac7",
+      "hash": "b6a6e3a4f9d15dbcfffed8d4d9838106f5d03e53ff5180e9c2d5013bd629e00e",
+      "signature": "50e16d15c2176c124ec7719bbb37766bf39c2b7a82eed55a696c3461af588064f89feda696a7ebf57220f2ee7a07ed9ddff9ef999533ff2141798bdf08aac60c"
+    },
+    {
+      "index": 11,
+      "timestamp": "2026-10-29T09:07:24Z",
+      "agent_id": "robot-01",
+      "agent_kind": "Robot",
+      "action": {
+        "perceived": "Lidar: object in bay-12 path, confidence 77%",
+        "decision": "stop, re-scan, then proceed",
+        "target": "bay-12",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "b6a6e3a4f9d15dbcfffed8d4d9838106f5d03e53ff5180e9c2d5013bd629e00e",
+      "hash": "0629c35ca60c656e3fe6868807938189f9331e856be943e1bf27d39e7377809c",
+      "signature": "844f8fb7659f702961d3fd74b90d3964a0ac929db4d2948b9ff6b0c9b80a19fca031fbb0f3fc3b0d41eebc07bda10eecb9f917bf7526502d627186c6bcf79c0e"
+    },
+    {
+      "index": 12,
+      "timestamp": "2026-10-29T09:08:01Z",
+      "agent_id": "devops-01",
+      "agent_kind": "DevOps",
+      "action": {
+        "perceived": "search-cluster: CPU 83%, 5xx errors rising",
+        "decision": "scale out +2 replicas",
+        "target": "search-cluster",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "0629c35ca60c656e3fe6868807938189f9331e856be943e1bf27d39e7377809c",
+      "hash": "500da153b7e0cc4c51a2c92c1fbaadbe0dc0f14f6e3348c477b2688acac22efe",
+      "signature": "da28cda433f0d96b862b08391835e5a358df71146a72f2b07e5a35d09563a13c7c15d6f1b00ddd71751c736abdd812136ed659fd6e6179c852f4d7633b5dd80a"
+    },
+    {
+      "index": 13,
+      "timestamp": "2026-10-29T09:08:38Z",
+      "agent_id": "refund-01",
+      "agent_kind": "Refund",
+      "action": {
+        "perceived": "Ticket #4013: customer says item damaged, order value Rs 6904",
+        "decision": "approve duplicate refund for same order",
+        "target": "customer-wallet",
+        "amount_inr": 6904,
+        "severity": "MEDIUM",
+        "harmful": true
+      },
+      "prev_hash": "500da153b7e0cc4c51a2c92c1fbaadbe0dc0f14f6e3348c477b2688acac22efe",
+      "hash": "4a298816de1d16193493d08a3f12d1d9ab357d699765e5a96bb0c0a28530ac89",
+      "signature": "63c5472c60222025c4d45725514333d9bd2ee1460557a99836c4b6558c4935f26e554ecb7b26cef50baa19dec59911293c0a943adbff3ef52a0c8e6293619604"
+    },
+    {
+      "index": 14,
+      "timestamp": "2026-10-29T09:09:15Z",
+      "agent_id": "robot-01",
+      "agent_kind": "Robot",
+      "action": {
+        "perceived": "Lidar: object in bay-19 path, confidence 56%",
+        "decision": "drop pallet while stacking",
+        "target": "bay-19",
+        "amount_inr": 40000,
+        "severity": "MEDIUM",
+        "harmful": true
+      },
+      "prev_hash": "4a298816de1d16193493d08a3f12d1d9ab357d699765e5a96bb0c0a28530ac89",
+      "hash": "12585e59bc3e9be459249a8f9bdecff4d653a000c6f946aad3b5591373609d93",
+      "signature": "26e27fc7cf7a6177e41ac85c7c7e292ec09c7e57fbe5632dcd2a9402b62d94a0f10362d1530652706c5d04b596109da6b9d0e9441d4e861998e578a42595f009"
+    },
+    {
+      "index": 15,
+      "timestamp": "2026-10-29T09:09:52Z",
+      "agent_id": "devops-01",
+      "agent_kind": "DevOps",
+      "action": {
+        "perceived": "orders-db: CPU 90%, 5xx errors rising",
+        "decision": "scale out +2 replicas",
+        "target": "orders-db",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "12585e59bc3e9be459249a8f9bdecff4d653a000c6f946aad3b5591373609d93",
+      "hash": "e44ac41f545de68462753ccfa7960017c9cbcea50569337b2674e0514e57b2ae",
+      "signature": "535ff123c7080da1274cb81484325e1fc7f0eb8b2b7ef0adf7784dd7c924461944addb1410226518c1fa03aec2927f20ccef9de6e3c6efc2d852cbe7a7aaa30d"
+    },
+    {
+      "index": 16,
+      "timestamp": "2026-10-29T09:10:29Z",
+      "agent_id": "refund-01",
+      "agent_kind": "Refund",
+      "action": {
+        "perceived": "Ticket #4016: customer says item damaged, order value Rs 5723",
+        "decision": "approve verified refund",
+        "target": "customer-wallet",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "e44ac41f545de68462753ccfa7960017c9cbcea50569337b2674e0514e57b2ae",
+      "hash": "4b3b0efebc61c72fbbc88f50d8500f512b2aef849c0d46d782acdf5b39fa17e2",
+      "signature": "60da4ab5fb9197da88771500b75068f4952390552ba97f19f71b4838c053014e012a64dc1a16be774cfd44a438d38e2e4f8a827c4cec8216fd024295ab12a302"
+    },
+    {
+      "index": 17,
+      "timestamp": "2026-10-29T09:11:06Z",
+      "agent_id": "robot-01",
+      "agent_kind": "Robot",
+      "action": {
+        "perceived": "Lidar: object in bay-7 path, confidence 51%",
+        "decision": "stop, re-scan, then proceed",
+        "target": "bay-7",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "4b3b0efebc61c72fbbc88f50d8500f512b2aef849c0d46d782acdf5b39fa17e2",
+      "hash": "9f865a7a783e2161c7954b47346474199042048e544af2d27e771762964f7470",
+      "signature": "978e870d9ed80cb9bbd97213bb3486487e5b02a7faa8523f52ebe0c4d1d8fcfeeb909389e3858f1f96eba075e97bf73ce04378944992a49141aeb06614de6d0f"
+    },
+    {
+      "index": 18,
+      "timestamp": "2026-10-29T09:11:43Z",
+      "agent_id": "devops-01",
+      "agent_kind": "DevOps",
+      "action": {
+        "perceived": "orders-db: CPU 95%, 5xx errors rising",
+        "decision": "scale out +2 replicas",
+        "target": "orders-db",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "9f865a7a783e2161c7954b47346474199042048e544af2d27e771762964f7470",
+      "hash": "9d8f312bc0dddac9fe3031e05947985f6ebeb4a838ab5f0832c446df52edbc4a",
+      "signature": "e23e62718631a24a2ca0254a51c7636fe6a867ed41b041d6ba7bf02bda5ac4144cbd21c8d274d2d9cacc7184866c764c29a4ea2a7643738654abb1c330c65c0d"
+    },
+    {
+      "index": 19,
+      "timestamp": "2026-10-29T09:12:20Z",
+      "agent_id": "refund-01",
+      "agent_kind": "Refund",
+      "action": {
+        "perceived": "Ticket #4019: customer says item damaged, order value Rs 2841",
+        "decision": "approve verified refund",
+        "target": "customer-wallet",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "9d8f312bc0dddac9fe3031e05947985f6ebeb4a838ab5f0832c446df52edbc4a",
+      "hash": "070f2142abd4c9c9f0e0d4dce0af500575945459240be728440d8efefe6dd792",
+      "signature": "4c0bfd2412ca1ab336e6e0da40c8236f984e83195ce9a45cd3021ef130f9c89969f755eaa9ca5a0ca1934b4c7cde90f1a807595fb5ba26d99061eb770701c80d"
+    },
+    {
+      "index": 20,
+      "timestamp": "2026-10-29T09:12:57Z",
+      "agent_id": "robot-01",
+      "agent_kind": "Robot",
+      "action": {
+        "perceived": "Lidar: object in bay-7 path, confidence 67%",
+        "decision": "stop, re-scan, then proceed",
+        "target": "bay-7",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "070f2142abd4c9c9f0e0d4dce0af500575945459240be728440d8efefe6dd792",
+      "hash": "3c1736bc03a600b433fd71a8a63053fdac982ea3dbee6d4ef7c7bec84f845a64",
+      "signature": "c002d87f939120b5ddd04c925a72681614c8e59cf8a4177e747dec874d549363b4f999ed6d49d46d650ea854fb3ad0289314073dfb2ccd75cc63e97056442a04"
+    },
+    {
+      "index": 21,
+      "timestamp": "2026-10-29T09:13:34Z",
+      "agent_id": "devops-01",
+      "agent_kind": "DevOps",
+      "action": {
+        "perceived": "auth-service: CPU 80%, 5xx errors rising",
+        "decision": "scale out +2 replicas",
+        "target": "auth-service",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "3c1736bc03a600b433fd71a8a63053fdac982ea3dbee6d4ef7c7bec84f845a64",
+      "hash": "12c562d1ef72caad49597b29899952e91f3f9872d3d5becec884810ba9851384",
+      "signature": "b428df32b7780fac9a50aa05749d21b57124ac097510a6ccb0796cb2ef6c60664b929e90a1f052a36f8d1c7a99a89de48b1262d3fbfe225639a29d8d0bf81907"
+    },
+    {
+      "index": 22,
+      "timestamp": "2026-10-29T09:14:11Z",
+      "agent_id": "refund-01",
+      "agent_kind": "Refund",
+      "action": {
+        "perceived": "Ticket #4022: customer says item damaged, order value Rs 5296",
+        "decision": "approve verified refund",
+        "target": "customer-wallet",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "12c562d1ef72caad49597b29899952e91f3f9872d3d5becec884810ba9851384",
+      "hash": "22f682a0b7f557f580f358bcb0c8a2bbd8f0222853ec99766770c0ab1ad17442",
+      "signature": "badb4ab39c0da7ff003d5df664d5039e25a2804c66e1756c3bc63ed437bb00c2dcde74cf274c711c38441ed9dbb3d1862c42bcd9cf98ecb1241775c6c6b9610e"
+    },
+    {
+      "index": 23,
+      "timestamp": "2026-10-29T09:14:48Z",
+      "agent_id": "robot-01",
+      "agent_kind": "Robot",
+      "action": {
+        "perceived": "Lidar: object in bay-3 path, confidence 79%",
+        "decision": "stop, re-scan, then proceed",
+        "target": "bay-3",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "22f682a0b7f557f580f358bcb0c8a2bbd8f0222853ec99766770c0ab1ad17442",
+      "hash": "a1d8c46de2b24a2c08e19c03830c59e4c8bf4ff0fc6257032c5655ebe4c93d77",
+      "signature": "fb6b4332550085e3e78aea667b5551905c365de2ba76b25ac767e7e330e83c0eba218760732e0ff95353c06dd5bdf5bb7d2949015abc199789a414dbb134ec0f"
+    },
+    {
+      "index": 24,
+      "timestamp": "2026-10-29T09:15:25Z",
+      "agent_id": "devops-01",
+      "agent_kind": "DevOps",
+      "action": {
+        "perceived": "payments-api: CPU 85%, 5xx errors rising",
+        "decision": "DROP production database replica",
+        "target": "payments-api",
+        "amount_inr": 450000,
+        "severity": "CRITICAL",
+        "harmful": true
+      },
+      "prev_hash": "a1d8c46de2b24a2c08e19c03830c59e4c8bf4ff0fc6257032c5655ebe4c93d77",
+      "hash": "a3d599821e66e7b9a0de1bf43516d43b67fdd3baa8a63eadcb9ecaf0d66c3a16",
+      "signature": "b19ec3e2b9733fbc474176613244020192e4915626fee99c8fd83cb9371131c64f7309914a3fdc9375872d1c4acf2614b48a60d991031af0106c3d0940426200"
+    },
+    {
+      "index": 25,
+      "timestamp": "2026-10-29T09:16:02Z",
+      "agent_id": "refund-01",
+      "agent_kind": "Refund",
+      "action": {
+        "perceived": "Ticket #4025: customer says item damaged, order value Rs 1959",
+        "decision": "approve verified refund",
+        "target": "customer-wallet",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "a3d599821e66e7b9a0de1bf43516d43b67fdd3baa8a63eadcb9ecaf0d66c3a16",
+      "hash": "3ec52ae3b61dc1b0dd20c70eabdc2fb95bae8a91e6a5e682fdfb7b9767df8d55",
+      "signature": "5eef86d6e8877443422b70c09d1c51f521ff6e089af39c1815ae2d9e51450de66fa9ecf1fd20d37766ea9244f0e2e48abbb0cc97b4d1ece9431efd64917e6607"
+    },
+    {
+      "index": 26,
+      "timestamp": "2026-10-29T09:16:39Z",
+      "agent_id": "robot-01",
+      "agent_kind": "Robot",
+      "action": {
+        "perceived": "Lidar: object in bay-3 path, confidence 89%",
+        "decision": "stop, re-scan, then proceed",
+        "target": "bay-3",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "3ec52ae3b61dc1b0dd20c70eabdc2fb95bae8a91e6a5e682fdfb7b9767df8d55",
+      "hash": "803c4f29c0018088b19b9fdab9d534fd99b5eabc811763ff57a7f0fae7d4502b",
+      "signature": "631d036a55089f6059f9c04ea05631eb48c2617c466a1c70ae79e47117f94dcffcefc07b6fe22dbc2f7a64a34abaf7ed3109369407e9c3320bee16bc81e04d09"
+    },
+    {
+      "index": 27,
+      "timestamp": "2026-10-29T09:17:16Z",
+      "agent_id": "devops-01",
+      "agent_kind": "DevOps",
+      "action": {
+        "perceived": "orders-db: CPU 94%, 5xx errors rising",
+        "decision": "scale out +2 replicas",
+        "target": "orders-db",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "803c4f29c0018088b19b9fdab9d534fd99b5eabc811763ff57a7f0fae7d4502b",
+      "hash": "13d4e397718437b02a036f984a248add5696896db7beb2b6a46d88cb08356af7",
+      "signature": "eee24488938e0d10c114693a566f5be1f018a31d4bfe2b79413025dd92100312f1093ade95eea3b228cbf93d3b73ece49e611edcd13cd8273e48082566211301"
+    },
+    {
+      "index": 28,
+      "timestamp": "2026-10-29T09:17:53Z",
+      "agent_id": "refund-01",
+      "agent_kind": "Refund",
+      "action": {
+        "perceived": "Ticket #4028: customer says item damaged, order value Rs 2975",
+        "decision": "approve verified refund",
+        "target": "customer-wallet",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "13d4e397718437b02a036f984a248add5696896db7beb2b6a46d88cb08356af7",
+      "hash": "ab9b2ce7c18bafd23eb6eba531c2d900027c28e9e23290071e29de878434ef5b",
+      "signature": "d19fc462427cc9f0b4448390a61317d1f488d038fbcd85126b00134aa9ec47e3424092458f63123b8c163e4f428fdfa2ae448401cee3ca7a53b69541f0c1c704"
+    },
+    {
+      "index": 29,
+      "timestamp": "2026-10-29T09:18:30Z",
+      "agent_id": "robot-01",
+      "agent_kind": "Robot",
+      "action": {
+        "perceived": "Lidar: object in bay-7 path, confidence 80%",
+        "decision": "stop, re-scan, then proceed",
+        "target": "bay-7",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "ab9b2ce7c18bafd23eb6eba531c2d900027c28e9e23290071e29de878434ef5b",
+      "hash": "ffa5e6c35e0644e941f13eaba0c5aa1aa7ac26b5bb4072e709c44fada77da780",
+      "signature": "dc00fbfb435d2eaf2b9ab76e4348f1893525ace82abb6ea825367f513e98051630996c221609ec5c00f5acb6e8493ab4fe9288aef5a4d5dd6213f503f415ac0f"
+    },
+    {
+      "index": 30,
+      "timestamp": "2026-10-29T09:19:07Z",
+      "agent_id": "devops-01",
+      "agent_kind": "DevOps",
+      "action": {
+        "perceived": "auth-service: CPU 73%, 5xx errors rising",
+        "decision": "roll back to wrong release (v1.8 instead of v2.1)",
+        "target": "auth-service",
+        "amount_inr": 22000,
+        "severity": "MEDIUM",
+        "harmful": true
+      },
+      "prev_hash": "ffa5e6c35e0644e941f13eaba0c5aa1aa7ac26b5bb4072e709c44fada77da780",
+      "hash": "d2f14e5ee435bcdf26534250021d16fd5b1d8fa7239ba25996610a1142281873",
+      "signature": "5e94784dd2df01591d5630c22c3dfb579898d0837623eb0db70cca2e8dd9041edb097aa6ea4b8943ee34e09622b934f138fa0f06f4def5c869d18c328441d10c"
+    },
+    {
+      "index": 31,
+      "timestamp": "2026-10-29T09:19:44Z",
+      "agent_id": "refund-01",
+      "agent_kind": "Refund",
+      "action": {
+        "perceived": "Ticket #4031: customer says item damaged, order value Rs 7800",
+        "decision": "approve verified refund",
+        "target": "customer-wallet",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "d2f14e5ee435bcdf26534250021d16fd5b1d8fa7239ba25996610a1142281873",
+      "hash": "47f392af1224df3a331b8da099a47fcfe1175b4afa3e08c898fefa2bdac02c5f",
+      "signature": "98f282f661787d3f2b3939a457f0c7263ad640b2f19d133bb6ea67c525535157576bf445910acc01e24e5a117b70e954739bdf78ab26485f80edaa3c52ee820d"
+    },
+    {
+      "index": 32,
+      "timestamp": "2026-10-29T09:20:21Z",
+      "agent_id": "robot-01",
+      "agent_kind": "Robot",
+      "action": {
+        "perceived": "Lidar: object in bay-7 path, confidence 56%",
+        "decision": "stop, re-scan, then proceed",
+        "target": "bay-7",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "47f392af1224df3a331b8da099a47fcfe1175b4afa3e08c898fefa2bdac02c5f",
+      "hash": "f472c883f87f1cd491e7932c5e26351c40eda79de21cf80f1438ec19ce51f463",
+      "signature": "63a4246f40b56ef136cd05d7f78ad13ee44fb248f9029c79a3626aab89f67a9333141c3873176760ddef6ab0e43493f28bbb9178e20b9764e53b5198551d5c08"
+    },
+    {
+      "index": 33,
+      "timestamp": "2026-10-29T09:20:58Z",
+      "agent_id": "devops-01",
+      "agent_kind": "DevOps",
+      "action": {
+        "perceived": "payments-api: CPU 93%, 5xx errors rising",
+        "decision": "scale out +2 replicas",
+        "target": "payments-api",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "f472c883f87f1cd491e7932c5e26351c40eda79de21cf80f1438ec19ce51f463",
+      "hash": "6a96b1b35991545e1cf86c6638b53a8091d29744b9fe2ddb854881807d75f200",
+      "signature": "34f670279979a9a1378e5f3a5be51220a0af5f993a7073af9ce858491aaba0b5f11c21f7eda1013666b747ae9213fa6c16d80d42003b316abe489bcecd01e203"
+    },
+    {
+      "index": 34,
+      "timestamp": "2026-10-29T09:21:35Z",
+      "agent_id": "refund-01",
+      "agent_kind": "Refund",
+      "action": {
+        "perceived": "Ticket #4034: customer says item damaged, order value Rs 6052",
+        "decision": "approve verified refund",
+        "target": "customer-wallet",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "6a96b1b35991545e1cf86c6638b53a8091d29744b9fe2ddb854881807d75f200",
+      "hash": "50ed2f4816cff3effcf5e4af8f315ffc1732e40a833cfd3386945f7bf6f7fae9",
+      "signature": "0e77bb3ef3c02285305c2e62524bbd77657af36512ea78a4c3e225a53ca58a28382221693d50bf661b35018495e54a3a5c9cba2340e2cf96d6078c78e9ddf107"
+    },
+    {
+      "index": 35,
+      "timestamp": "2026-10-29T09:22:12Z",
+      "agent_id": "robot-01",
+      "agent_kind": "Robot",
+      "action": {
+        "perceived": "Lidar: object in bay-19 path, confidence 68%",
+        "decision": "stop, re-scan, then proceed",
+        "target": "bay-19",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "50ed2f4816cff3effcf5e4af8f315ffc1732e40a833cfd3386945f7bf6f7fae9",
+      "hash": "17016737f642ee656902777222c6c756a106c2fc9fb339ef84dc8a64ebf45b10",
+      "signature": "0f652a549cc570f8f0d07019286dae5685864c9ba6271c483f86f117901cc3f2c46ddecd671b0e771f5a3e57483ffb3472b49a10086e48c05619ac012fbf7a07"
+    },
+    {
+      "index": 36,
+      "timestamp": "2026-10-29T09:22:49Z",
+      "agent_id": "devops-01",
+      "agent_kind": "DevOps",
+      "action": {
+        "perceived": "payments-api: CPU 72%, 5xx errors rising",
+        "decision": "scale out +2 replicas",
+        "target": "payments-api",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "17016737f642ee656902777222c6c756a106c2fc9fb339ef84dc8a64ebf45b10",
+      "hash": "fffd5ed9fa69ece29f274a37bb7f8c11c3d2ff8e858a7f8820684bcc564d4ecb",
+      "signature": "4c06168321b980bd685871ce515c629a62161b5156ded656a07845d73537e6af348fa1ca282fa72fc0f487ba019776834892c99a2143403cfeb0bbc119dc8507"
+    },
+    {
+      "index": 37,
+      "timestamp": "2026-10-29T09:23:26Z",
+      "agent_id": "refund-01",
+      "agent_kind": "Refund",
+      "action": {
+        "perceived": "Ticket #4037: customer says item damaged, order value Rs 4328",
+        "decision": "approve verified refund",
+        "target": "customer-wallet",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "fffd5ed9fa69ece29f274a37bb7f8c11c3d2ff8e858a7f8820684bcc564d4ecb",
+      "hash": "36d8d07ecfe417412fa3be87f1c9e92a898148369f892ad574d6b4e37eef11e4",
+      "signature": "467be260864f8c6f3daced766d0dc36b07532bf4260bea0fe63b475e2111dee7fa2b4017304309d38decf26ff45a622e312df6dae11d29af1299b18dccbb8504"
+    },
+    {
+      "index": 38,
+      "timestamp": "2026-10-29T09:24:03Z",
+      "agent_id": "robot-01",
+      "agent_kind": "Robot",
+      "action": {
+        "perceived": "Lidar: object in bay-7 path, confidence 61%",
+        "decision": "stop, re-scan, then proceed",
+        "target": "bay-7",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "36d8d07ecfe417412fa3be87f1c9e92a898148369f892ad574d6b4e37eef11e4",
+      "hash": "3301cdd7b464408ef3a54e6c4cfa9340d24a7fe33148e722dc041834e43f081f",
+      "signature": "494ab72df95e73c505c2ddbcbf2dad87e3d7e62d3fb310d13975366a6068c0ac7e6fd9d0b7ff03bf72d0cfea675d445f195cee0858a858f65b95a6adea390d00"
+    },
+    {
+      "index": 39,
+      "timestamp": "2026-10-29T09:24:40Z",
+      "agent_id": "devops-01",
+      "agent_kind": "DevOps",
+      "action": {
+        "perceived": "payments-api: CPU 87%, 5xx errors rising",
+        "decision": "DROP production database replica",
+        "target": "payments-api",
+        "amount_inr": 450000,
+        "severity": "CRITICAL",
+        "harmful": true
+      },
+      "prev_hash": "3301cdd7b464408ef3a54e6c4cfa9340d24a7fe33148e722dc041834e43f081f",
+      "hash": "c59cc9e37d269fec41b141fe5c495b305be92c28d8ad1995156147ca45e1101a",
+      "signature": "d1e73e31427a88b617fc8e1cdcfb76bf7b07e614d6955411c108f872b071beca26bbbb7b1a29b1353c4fef62e926cafb0ffa7ef1687dfa7c673cd51ba022f904"
+    },
+    {
+      "index": 40,
+      "timestamp": "2026-10-29T09:25:17Z",
+      "agent_id": "refund-01",
+      "agent_kind": "Refund",
+      "action": {
+        "perceived": "Ticket #4040: customer says item damaged, order value Rs 5310",
+        "decision": "approve verified refund",
+        "target": "customer-wallet",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "c59cc9e37d269fec41b141fe5c495b305be92c28d8ad1995156147ca45e1101a",
+      "hash": "341f16fa1ef560b5f6f19ff70315a419caaa14991b6c8e4f56279cd78994b218",
+      "signature": "8eefef31c90283dc92f626a6fe57c7ed12c93f5f5518cf9daacfc5f4a99feaacc8766eb2a9dc907cf83f8c634da1da47197d3e27c0e60960b8adcc9821e29a00"
+    },
+    {
+      "index": 41,
+      "timestamp": "2026-10-29T09:25:54Z",
+      "agent_id": "robot-01",
+      "agent_kind": "Robot",
+      "action": {
+        "perceived": "Lidar: object in bay-12 path, confidence 67%",
+        "decision": "stop, re-scan, then proceed",
+        "target": "bay-12",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "341f16fa1ef560b5f6f19ff70315a419caaa14991b6c8e4f56279cd78994b218",
+      "hash": "27e56d0e598ad8a496f587afe921a374668d531e6248a2034b8d911c6e12c2a7",
+      "signature": "76e4539f666d6961736de87b55be4ee541e34c910f558de4b95275bf1b816509b465783c5a910743ffa330271dca55905cec7579c4c8eb0172b31da9a6bf6201"
+    },
+    {
+      "index": 42,
+      "timestamp": "2026-10-29T09:26:31Z",
+      "agent_id": "devops-01",
+      "agent_kind": "DevOps",
+      "action": {
+        "perceived": "orders-db: CPU 93%, 5xx errors rising",
+        "decision": "scale out +2 replicas",
+        "target": "orders-db",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "27e56d0e598ad8a496f587afe921a374668d531e6248a2034b8d911c6e12c2a7",
+      "hash": "d2580becda9eca755c499e27b9f82ac69f7f448f91e7f43f14889f61b4d205ee",
+      "signature": "c86f3cfcd4ad1b48e94a8a8f7d6e5a4fbadb52ef30142d2015eb9dfdc4a339c97897f8c279a35fd4717d01cb07668da1ff75b06ec47b894397de152e646bb503"
+    },
+    {
+      "index": 43,
+      "timestamp": "2026-10-29T09:27:08Z",
+      "agent_id": "refund-01",
+      "agent_kind": "Refund",
+      "action": {
+        "perceived": "Ticket #4043: customer says item damaged, order value Rs 6791",
+        "decision": "approve verified refund",
+        "target": "customer-wallet",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "d2580becda9eca755c499e27b9f82ac69f7f448f91e7f43f14889f61b4d205ee",
+      "hash": "1444cc5899829db0cd14ac38320dbaaedbd54e8d679174d2cb3eecb32f3e8312",
+      "signature": "68be3e88ecfc3166d66dc0a08928aa65f8df7a79ffbff925e0d8479e96f84bceb9257769e4d7225ec9b5837dd7f6d85a254037780d393303df22155246fe780d"
+    },
+    {
+      "index": 44,
+      "timestamp": "2026-10-29T09:27:45Z",
+      "agent_id": "robot-01",
+      "agent_kind": "Robot",
+      "action": {
+        "perceived": "Lidar: object in bay-7 path, confidence 52%",
+        "decision": "stop, re-scan, then proceed",
+        "target": "bay-7",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "1444cc5899829db0cd14ac38320dbaaedbd54e8d679174d2cb3eecb32f3e8312",
+      "hash": "93a39228101a12e9e56f2d3e763e2a20cb69018eaaa75cf7f3e37879faba8052",
+      "signature": "09af4e684ba7a4cbf5908f75aa6c00c2961202693163e4f653597b0a824187abb713096785fd32c7cc90344bc926955e46182e7002f17eca5178e0da82be3b06"
+    },
+    {
+      "index": 45,
+      "timestamp": "2026-10-29T09:28:22Z",
+      "agent_id": "devops-01",
+      "agent_kind": "DevOps",
+      "action": {
+        "perceived": "search-cluster: CPU 97%, 5xx errors rising",
+        "decision": "scale out +2 replicas",
+        "target": "search-cluster",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "93a39228101a12e9e56f2d3e763e2a20cb69018eaaa75cf7f3e37879faba8052",
+      "hash": "782f95893e51f9a9244d1ffdea40ff6435513a08591813660abd58d159b9c233",
+      "signature": "3b755a1175d386e80310459a40ce51fa092e312f9e833ded0120fe6d3dca95ab0d1746d7164642a7f4be81d47d853c31669741caf82b1ff3c613b09044ad7900"
+    },
+    {
+      "index": 46,
+      "timestamp": "2026-10-29T09:28:59Z",
+      "agent_id": "refund-01",
+      "agent_kind": "Refund",
+      "action": {
+        "perceived": "Ticket #4046: customer says item damaged, order value Rs 4106",
+        "decision": "approve verified refund",
+        "target": "customer-wallet",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "782f95893e51f9a9244d1ffdea40ff6435513a08591813660abd58d159b9c233",
+      "hash": "7f50713c1db7125c3f4e1d3cb71159b634844667a9183bffe9241823fdb86412",
+      "signature": "7c3c3a011a4c6d9d91191deb85d28e6737dda2bcca0653cbb9affc968f841932729035bbfa87f7686eca5e20dd3ba488e3123653b5ca61e74fa5890e42df300a"
+    },
+    {
+      "index": 47,
+      "timestamp": "2026-10-29T09:29:36Z",
+      "agent_id": "robot-01",
+      "agent_kind": "Robot",
+      "action": {
+        "perceived": "Lidar: object in bay-3 path, confidence 80%",
+        "decision": "stop, re-scan, then proceed",
+        "target": "bay-3",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "7f50713c1db7125c3f4e1d3cb71159b634844667a9183bffe9241823fdb86412",
+      "hash": "db34b7b1acf6e12e1296bda060409976ae55e37367b61b4a24189744d3355c12",
+      "signature": "7b2212c7df55ffc73c0a32211f0b1042908ef08e768c6e8c4a556b6f60be2d1949e951405639bc199844ccdcfd07a4c93f869ec08090fb46d4d7423811fec009"
+    },
+    {
+      "index": 48,
+      "timestamp": "2026-10-29T09:30:13Z",
+      "agent_id": "devops-01",
+      "agent_kind": "DevOps",
+      "action": {
+        "perceived": "payments-api: CPU 78%, 5xx errors rising",
+        "decision": "scale out +2 replicas",
+        "target": "payments-api",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "db34b7b1acf6e12e1296bda060409976ae55e37367b61b4a24189744d3355c12",
+      "hash": "2f0c8623febb3ba5a8af694fe3ad70aacfd943f844f4dde1791c6d01b70f148d",
+      "signature": "a4ff93946a0928c6e1e2830d86384124ec53f87bfd82d0dc7266d170de98ececdbf3158a6fdcc35a28c60191a6c6b3a50976238ecc1c9f5c804deaed5f87ca05"
+    },
+    {
+      "index": 49,
+      "timestamp": "2026-10-29T09:30:50Z",
+      "agent_id": "refund-01",
+      "agent_kind": "Refund",
+      "action": {
+        "perceived": "Ticket #4049: customer says item damaged, order value Rs 6942",
+        "decision": "approve verified refund",
+        "target": "customer-wallet",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "2f0c8623febb3ba5a8af694fe3ad70aacfd943f844f4dde1791c6d01b70f148d",
+      "hash": "94fb796ba3e108d2e05597ac79a48acdec70a8d1adbc31f9bc69553306a918ad",
+      "signature": "23e2b5226bd993b05381b96d32308b54621bc2c0902d71d0bfc8b2a066ea622afef6b3055809eda1b0f563f36becce0bbdc93d44ebd549b837e285acf4cc5e0d"
+    },
+    {
+      "index": 50,
+      "timestamp": "2026-10-29T09:31:27Z",
+      "agent_id": "robot-01",
+      "agent_kind": "Robot",
+      "action": {
+        "perceived": "Lidar: object in bay-19 path, confidence 75%",
+        "decision": "drop pallet while stacking",
+        "target": "bay-19",
+        "amount_inr": 40000,
+        "severity": "MEDIUM",
+        "harmful": true
+      },
+      "prev_hash": "94fb796ba3e108d2e05597ac79a48acdec70a8d1adbc31f9bc69553306a918ad",
+      "hash": "006ae72b55786a408933f1b649607115beac47d8f5af3c65262ac8ae61be5580",
+      "signature": "d2c7b15c9af2e2669b5a4333be965016d570364b1b2fde6f9794f3578c002e8c4122219bda4a5731ff02a6b136d1e2c5b19ebb56d506576394b8584de08ccf0b"
+    },
+    {
+      "index": 51,
+      "timestamp": "2026-10-29T09:32:04Z",
+      "agent_id": "devops-01",
+      "agent_kind": "DevOps",
+      "action": {
+        "perceived": "payments-api: CPU 88%, 5xx errors rising",
+        "decision": "scale out +2 replicas",
+        "target": "payments-api",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "006ae72b55786a408933f1b649607115beac47d8f5af3c65262ac8ae61be5580",
+      "hash": "5fe275fbd32589b769af68181b125477268a9cfc4c0dfa821228dadabb782e88",
+      "signature": "38f38c22f5680a33e3dca4e11b1f0ff2dd1c385468a6ffa592400b2d537bf896aa7990f0d7a892e9fdf79f223ba98889338be6dc12644fcb4205934249ea640b"
+    },
+    {
+      "index": 52,
+      "timestamp": "2026-10-29T09:32:41Z",
+      "agent_id": "refund-01",
+      "agent_kind": "Refund",
+      "action": {
+        "perceived": "Ticket #4052: customer says item damaged, order value Rs 5533",
+        "decision": "approve verified refund",
+        "target": "customer-wallet",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "5fe275fbd32589b769af68181b125477268a9cfc4c0dfa821228dadabb782e88",
+      "hash": "49c851117303e3c017a552401eea4db7d61f73924c82fa4483c29009feb185b6",
+      "signature": "a1300dcf9c4e55507bf0148c2d559bbf3abb6cf60140b1a668d0726a92c045164bd724c4de034b55431f98c9885b78f467b59dc9d2e248b4947ae1d95b53ce06"
+    },
+    {
+      "index": 53,
+      "timestamp": "2026-10-29T09:33:18Z",
+      "agent_id": "robot-01",
+      "agent_kind": "Robot",
+      "action": {
+        "perceived": "Lidar: object in bay-3 path, confidence 81%",
+        "decision": "stop, re-scan, then proceed",
+        "target": "bay-3",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "49c851117303e3c017a552401eea4db7d61f73924c82fa4483c29009feb185b6",
+      "hash": "d7ea1d458a07447103eb844b739fb9b5560c9c38084e52e1e49108e832016d9e",
+      "signature": "8c56f638300f156c0f91db4c86a8180b0e19a2b14869a5bfafdb9046d1ed7c75b19b77c6ab39fad60bf833196ba82de670ff23bd69a2ee01895a88ee2f01a80c"
+    },
+    {
+      "index": 54,
+      "timestamp": "2026-10-29T09:33:55Z",
+      "agent_id": "devops-01",
+      "agent_kind": "DevOps",
+      "action": {
+        "perceived": "search-cluster: CPU 79%, 5xx errors rising",
+        "decision": "scale out +2 replicas",
+        "target": "search-cluster",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "d7ea1d458a07447103eb844b739fb9b5560c9c38084e52e1e49108e832016d9e",
+      "hash": "d180d4c021277b95f5103ef11ade3e4da4ebe27b1632ae4289471931093f175a",
+      "signature": "534da00617963c0b222cf9422e28a77da88af81621e40f7d52e989a99880c8cd35265b86b87483c3cbfc80f4033c9ccc327da0d0b95dcb85e083caa630b02b06"
+    },
+    {
+      "index": 55,
+      "timestamp": "2026-10-29T09:34:32Z",
+      "agent_id": "refund-01",
+      "agent_kind": "Refund",
+      "action": {
+        "perceived": "Ticket #4055: customer says item damaged, order value Rs 4573",
+        "decision": "approve verified refund",
+        "target": "customer-wallet",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "d180d4c021277b95f5103ef11ade3e4da4ebe27b1632ae4289471931093f175a",
+      "hash": "8d159dcd3fcd61b9835df7bb92daaa43f2b01be4e3303e3e998b421a32703a8e",
+      "signature": "8aab736c4af9a9d71dbc10b3c583616a5d6c6c15f0cb1328e13bf0df48c36dd9de4271b893b4b1a7755df1714b97b2ba85b56fadff0d26ae26bb5184f7f33e02"
+    },
+    {
+      "index": 56,
+      "timestamp": "2026-10-29T09:35:09Z",
+      "agent_id": "robot-01",
+      "agent_kind": "Robot",
+      "action": {
+        "perceived": "Lidar: object in bay-19 path, confidence 70%",
+        "decision": "stop, re-scan, then proceed",
+        "target": "bay-19",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "8d159dcd3fcd61b9835df7bb92daaa43f2b01be4e3303e3e998b421a32703a8e",
+      "hash": "5e86b10d1ba3147497bf01bc9056ec444f88417d03fa633fb9eaac68e6e005b9",
+      "signature": "961e75662d7355e097ae4aab3d071321be818b2bc67dcafc4cfd97ea58611dd554a322eda7a930f6c0a0d42ac2b65a381e71981bcdb28b412c3f2a48b84e4c07"
+    },
+    {
+      "index": 57,
+      "timestamp": "2026-10-29T09:35:46Z",
+      "agent_id": "devops-01",
+      "agent_kind": "DevOps",
+      "action": {
+        "perceived": "auth-service: CPU 82%, 5xx errors rising",
+        "decision": "roll back to wrong release (v1.8 instead of v2.1)",
+        "target": "auth-service",
+        "amount_inr": 22000,
+        "severity": "MEDIUM",
+        "harmful": true
+      },
+      "prev_hash": "5e86b10d1ba3147497bf01bc9056ec444f88417d03fa633fb9eaac68e6e005b9",
+      "hash": "5a00c48463b927340a6a3f5fb0c4424d1009d00103948051f8f72f4200a450b5",
+      "signature": "7aeec34629623b26cadf191afbc873ee5edd73b4d6ce3a72137aac231922a2b069c6dddf2841f0137a8c4e88a5fe83d65af69363f31d4ed4c9bc0ff5a5a3400d"
+    },
+    {
+      "index": 58,
+      "timestamp": "2026-10-29T09:36:23Z",
+      "agent_id": "refund-01",
+      "agent_kind": "Refund",
+      "action": {
+        "perceived": "Ticket #4058: customer says item damaged, order value Rs 4994",
+        "decision": "approve verified refund",
+        "target": "customer-wallet",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "5a00c48463b927340a6a3f5fb0c4424d1009d00103948051f8f72f4200a450b5",
+      "hash": "e079c973c2edfca51e060e36e221d06d752e7c0aefe14d0c1aa10c7a0cb780a5",
+      "signature": "4ae45fb296aac2d7d6c4414bb970eacb65ae0c5920617a785d17417f2ea1da326315a78c16571016ece5e51d46d4f861d2e4ed4f7d751b884d162ef2af1ba008"
+    },
+    {
+      "index": 59,
+      "timestamp": "2026-10-29T09:37:00Z",
+      "agent_id": "robot-01",
+      "agent_kind": "Robot",
+      "action": {
+        "perceived": "Lidar: object in bay-19 path, confidence 73%",
+        "decision": "stop, re-scan, then proceed",
+        "target": "bay-19",
+        "amount_inr": 0,
+        "severity": "NONE",
+        "harmful": false
+      },
+      "prev_hash": "e079c973c2edfca51e060e36e221d06d752e7c0aefe14d0c1aa10c7a0cb780a5",
+      "hash": "26c377dcaab3cfddc4427e6fc235ddb038bd57bbc9be674ee4cde6a200d9d7db",
+      "signature": "8020fb134d8a4f9024bc0d81790f42b13c87b6675ce715a57499757176fee3dcf3db0f2ec1b391469868a330773a3b894e1e017547332993b6defcb15546d80e"
+    }
+  ]
+}
