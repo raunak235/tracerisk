@@ -1,6 +1,9 @@
 # TraceRisk: a tamper-evident black box for AI agents (Go)
 
-OOP + Cryptography project. A working prototype of the TraceRisk startup idea:
+> Starting version generated with AI assistance. I'm reading it file by
+> file and extending it. See "My changes" below.
+
+Cryptography project. A learning prototype of the TraceRisk idea:
 
 * **Layer A - Black Box (`blackbox/`)**: every action an AI agent takes is written to a
   cryptographically tamper-evident log.
@@ -18,22 +21,6 @@ go test ./...                  # unit tests
 
 **Live demo trick:** run with `-export`, open `ledger.json`, change any `"amount_inr"` value,
 then run `go run . verify ledger.json` and watch it name the exact event you touched.
-
-## OOP concepts (and where to find them)
-
-Go has no `class` keyword. It does OOP with **structs + methods + interfaces + embedding**.
-
-| Concept | Where | How |
-|---|---|---|
-| **Encapsulation** | `blackbox/ledger.go`, `signer.go` | `Ledger.events` and `Ed25519Signer.priv` are lowercase (private). The only way in is `Append()`; `Events()` returns a *copy* (see `TestEventsReturnsCopy`). |
-| **Abstraction / Interface** | `agent.Agent`, `blackbox.Signer`, `risk.Scorer` | Callers depend on *what* something does, not *how*. |
-| **Inheritance (via embedding)** | `agent/agent.go` | `DevOpsAgent`, `RefundAgent`, `RobotAgent` each embed `Base` and get `ID()` / `Kind()` for free. Go prefers *composition over inheritance*. |
-| **Polymorphism** | `main.go` | `agents := []agent.Agent{...}`, then `a.Act(step)`: same call, three behaviours. |
-| **Strategy pattern** | `risk/risk.go` | Swap `FrequencyScorer`, `SeverityScorer`, `ExposureScorer` freely. |
-| **Composite pattern** | `risk.Composite` | Holds many `Scorer`s *and is itself a `Scorer`*, so models can nest. |
-| **Custom error type** | `blackbox.TamperError` | Carries `Index` + `Reason`, not just a string. |
-| **Method chaining** | `NewComposite().Add(..).Add(..)` | `Add` returns the receiver. |
-| **Compile-time interface check** | `var _ Agent = (*DevOpsAgent)(nil)` | Compiler fails if a type stops satisfying the interface. |
 
 ## Cryptography (and what each piece stops)
 
@@ -57,18 +44,6 @@ tracerisk/
   blackbox/ledger_test.go
   risk/risk.go          Scorer interface, 3 scorers, Composite, Assess()
 ```
-
-## Likely viva questions
-
-**Why Go if it has no classes?** Go uses composition and interfaces. Embedding gives code reuse; interfaces give polymorphism, and they are satisfied implicitly (no `implements` keyword).
-
-**Why hash AND sign? Isn't the hash enough?** Anyone can recompute SHA-256. A hash proves *consistency*; a signature proves *who wrote it*.
-
-**Why a Merkle tree?** One 32-byte fingerprint of the whole log. It can be published, and a regulator can later detect rewrites or truncation.
-
-**Why is `ComputeHash` exported?** On purpose, to show the attacker knows the algorithm and still fails (Attack C). Security comes from the private key, not from hiding the algorithm.
-
-**Why does `Events()` copy the slice?** Otherwise callers could mutate the ledger's internals and break encapsulation.
 
 ## Honest limitations (say these before your teacher asks)
 
